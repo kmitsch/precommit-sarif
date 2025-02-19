@@ -13,22 +13,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         
-      # - name: Check for presence of SARIF report
-      #   run: |
-      #     # List all changed files in the PR
-      #     git fetch origin ${{ github.event.pull_request.base.ref }}:refs/remotes/origin/${{ github.event.pull_request.base.ref }}
-      #     CHANGED_FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} $GITHUB_SHA)
-      #     echo "Changed files: $CHANGED_FILES"
-          
-      #     # Check if the SARIF file is present
-      #     if echo "$CHANGED_FILES" | grep -q 'semgrep-python-results.sarif'; then
-      #       echo "SARIF file found."
-      #       echo "sarif_found=true" >> $GITHUB_ENV
-      #     else
-      #       echo "SARIF file not found."
-      #       echo "sarif_found=false" >> $GITHUB_ENV
-      #     fi
-      
       - name: Check for SARIF report
         run: |
           if curl -s -H "Accept: application/vnd.github.v3+json" \
