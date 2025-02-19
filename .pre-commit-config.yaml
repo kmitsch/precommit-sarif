@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/returntocorp/semgrep
+    rev: v1.108.0
+    hooks:
+      - id: semgrep
+        name: semgrep-python
+        args:
+          - --config=p/python
+          - --output=semgrep-python-results.sarif
+          - --sarif
+          - --metrics=off
+        pass_filenames: true # Only scan changed files
