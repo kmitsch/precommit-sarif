@@ -14,7 +14,7 @@ To maintain secure code practices, the maintainers of this repository encourage 
 ### Setting Up Semgrep for Pre-commit
 
 1. **Install Semgrep:**
-   [Official quickstart](https://semgrep.dev/docs/getting-started/quickstart)
+   - [Official quickstart](https://semgrep.dev/docs/getting-started/quickstart)
 
 2. **Configure Pre-commit Hook:**
    Ensure you have `pre-commit` installed:
