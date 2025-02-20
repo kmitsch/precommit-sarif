@@ -26,8 +26,11 @@ jobs:
             exit 1
           fi
         
+  add-sarif-reminder:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Add SARIF Reminder
-        if: always()
         if: env.sarif_found == 'false'
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
