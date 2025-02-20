@@ -27,6 +27,7 @@ jobs:
           fi
         
       - name: Add SARIF Reminder
+        if: always()
         if: env.sarif_found == 'false'
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
