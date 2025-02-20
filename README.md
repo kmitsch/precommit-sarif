@@ -1,5 +1,6 @@
 # precommit-sarif
 
+
 ## Overview
 
 This project is an exercise in setting up automatic security scans using Semgrep on developers' workstations, resulting in the generation of a SARIF report. The repo includes a GitHub workflow that verifies the presence of the report when a pull request is created.
