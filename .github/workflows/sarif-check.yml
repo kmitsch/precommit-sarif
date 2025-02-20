@@ -23,6 +23,7 @@ jobs:
           else
             echo "SARIF file not found."
             echo "sarif_found=false" >> $GITHUB_ENV
+            exit 1
           fi
         
       - name: Add SARIF Reminder
