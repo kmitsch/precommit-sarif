@@ -38,3 +38,12 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -d "{\"body\": \"$COMMENT_BODY\"}" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments"
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: semgrep-python-results.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: local-semgrep-python-results
