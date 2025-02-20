@@ -42,4 +42,3 @@ semgrep --config=p/python --sarif --output=semgrep-python-results.sarif
 
 The scan generates a `semgrep-python-results.sarif` file, which should be included with submitted commits.
 
-
